@@ -47,14 +47,17 @@ XF = ((NX1.*AK)*-1);
 figure('Name', sprintf('ForceTrace %s', file));
 
 %low-pass filtered to 20 Hz 
-dsd = movmean(XF, 100);
-tds = movmean(T, 100);
+sd = smooth(XF,100);
+dsd = downsample(sd,50);
+st = smooth(T,100);
+tds = downsample(st,50);
 out.AX = plot(tds,dsd, 'Color', [0.0941, 0.3843, 0.8078]);
 
 xlabel('time (sec)');
 ylabel('X-Force (pN)');
 set(gca,'FontSize',10);
 
+hold off
 
 %saves output files to folder named AnalyzedData in the same directory as
 %Feynman_AnalysisCodes
