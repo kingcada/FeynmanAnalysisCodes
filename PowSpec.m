@@ -20,9 +20,9 @@ end
 %Default options
 opts.ra = 1500/2; %Bead radius, nm
 opts.colors = {[.2039 .5961 .8588] [.1608 .5020 .7255]};
-opts.Fmin = 500;
-opts.Fmax = 23e3;
-opts.lortype = 3;
+opts.Fmin = 1;
+opts.Fmax = 20e3;
+opts.lortype = 2;
 opts.wV = 9.1e-10;
 
 %Use File Exchange LVM viewer: https://www.mathworks.com/matlabcentral/fileexchange/19913-lvm-file-import
