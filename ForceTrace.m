@@ -62,5 +62,5 @@ hold off
 %saves output files to folder named AnalyzedData in the same directory as
 %Feynman_AnalysisCodes
 [~,name]=fileparts(file);
-save(['AnalyzedData/ForceTraceAnalyzed_', name, '.mat'],'cal', 'dat', 'NX1', 'XF', 'T','AS');
+save(['AnalyzedData/ForceTraceAnalyzed_', name, '.mat'],'cal', 'dat', 'NX1', 'XF', 'T','AS', 'dsd', 'tds');
 end

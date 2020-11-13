@@ -31,7 +31,7 @@ opts.name = []; %Name of this detector, e.g. 'AX'
 opts.color = [.8 .8 .8]; %Color to plot power spectrum
 opts.verbose = 1;
 opts.Sum = 0;
-opts.lortype = 3; %1 = pure lorentzian, 2 = 1 filter, 3 = filter+timedelay, 4 = 2 filters
+opts.lortype = 2; %1 = pure lorentzian, 2 = 1 filter, 3 = filter+timedelay, 4 = 2 filters
 %Assign any overridden values
 if exist('inOpts','var') && isstruct(inOpts)
     fn = fieldnames(inOpts);
@@ -174,4 +174,4 @@ out.P = Pbf;
 out.Pall = Pall;
 out.dC = dC;
 out.D = D;
-end
+end 
